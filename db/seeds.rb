@@ -45,12 +45,15 @@ Company.all.each do |company|
     Contract.create!(
       price: rand(1..100),
       source: [0, 1].sample,
-      start_at: "2021-07-30",
+      starts_at: "2021-07-30",
       ends_at: "2022-07-30",
       active: [true, false].sample,
       product:,
-      user: users.sample
+      user: users.sample,
+      company:
     )
+
+    puts "Contract created."
   end
 end
 
